@@ -1,0 +1,90 @@
+<section class="row">
+    <div class="col-md-6 mt-3">
+        <div class="card" style="width: 18rem;">
+            <img src="../../../../assets/profile.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{employee.name}} {{employee.secondName}}  </h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> <span> <strong>Cedula:</strong> </span> {{employee.ci}} </li>
+              <li class="list-group-item"> <span> <strong>Cargo:</strong> </span> {{employee.companyPosition}}</li>
+              <li class="list-group-item"> <span> <strong>Nivel de Educacion:</strong> </span> {{employee.professionalLevel}}</li>
+              <li class="list-group-item"> <span> <strong>Fecha de ingreso:</strong> </span> {{employee.dateInsert}}</li>
+              <li class="list-group-item"> <span> <strong>Salario:</strong> </span> {{employee.salary}}</li>
+              <li class="list-group-item"> <span> <strong>Banco:</strong> </span> {{employee.bank}}</li>
+              <li class="list-group-item"> <span> <strong>N° Cuenta:</strong> </span> {{employee.account}}</li>
+              <li class="list-group-item"> <span> <strong>Quincena:</strong> </span> {{employee.pay}}</li>
+            </ul>
+          </div>
+    </div>
+
+
+    <div class="col-md-6 mt-3">
+        <div class="card">
+            <div class="card-header">
+                Editar
+            </div>
+            <form #formUpdated="ngForm" (ngSubmit)="update(formUpdated)">
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="employee.name"  name="name" placeholder="Nombre" class="form-control">
+                    </div>
+        
+        
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="employee.secondName"  name="secondName" placeholder="Apellido" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="employee.ci" name="ci"  placeholder="Cedula" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="employee.companyPosition"  name="companyPosition" placeholder="Cargo" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="employee.professionalLevel"  name="professionalLevel" placeholder="Nivel de Estudio" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="date" [(ngModel)]="employee.dateInsert"  name="dateInsert" placeholder="Fecha de ingreso" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="employee.salary"  name="salary" placeholder="Salario" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <select [(ngModel)]="employee.bank" name="bank" class="form-control">
+                            <option value="" disabled="disabled">Banco</option>
+                            <option value="BOD">BOD</option>
+                            <option value="Provincial">Provincial</option>
+                            <option value="Banco de Venezuela">Banco de Venezuela</option>
+                            <option value="Banco del tesoro">Banco del tesoro</option>
+                            <option value="Banesco">Banesco</option>
+                            <option value="Mercantil">Mercantil</option>
+                            <option value="BNC">BNC</option>
+                            <option value="BFC">BFC</option>
+                            <option value="Banco Bicentenario">Banco Bicentenario</option>
+                            <option value="Banco Exterior">Banco Exterior</option>
+                            <option value="Bancaribe">Bancaribe</option>
+                            <option value="Venezolana de Credito">Venezolana de Credito</option>
+                            <option value="Banco Caroni">Banco Caroni</option>
+                            <option value="Banco Plaza">Banco Plaza</option>
+                            <option value="Citibank">Citibank</option>
+                            <option value="Banplus">Banplus</option>
+                            <option value="Banco Activo">Banco Activo</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="employee.account" name="account" placeholder="Numero de cuenta" class="form-control">
+                    </div> 
+        
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

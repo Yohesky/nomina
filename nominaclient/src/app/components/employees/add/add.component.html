@@ -1,0 +1,70 @@
+<div class="row mt-4">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                Agregar un empleado
+            </div>
+            <form #formEmployee="ngForm" (ngSubmit)="addEmployee(formEmployee)">
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text"  name="name" placeholder="Nombre" class="form-control" [(ngModel)]="employee.name">
+                    </div>
+        
+        
+                    <div class="form-group">
+                        <input type="text"  name="secondName" placeholder="Apellido" class="form-control" [(ngModel)]="employee.secondName">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="employee.ci" name="ci" placeholder="Cedula" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="employee.companyPosition" name="companyPosition" placeholder="Cargo" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="employee.professionalLevel" name="professionalLevel" placeholder="Nivel de Estudio" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="date" [(ngModel)]="employee.dateInsert" name="dateInsert" placeholder="Fecha de ingreso" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="employee.salary" name="salary" placeholder="Salario" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <select [(ngModel)]="employee.bank" name="bank" class="form-control">
+                            <option value="" disabled="disabled">Banco</option>
+                            <option value="BOD">BOD</option>
+                            <option value="Provincial">Provincial</option>
+                            <option value="Banco de Venezuela">Banco de Venezuela</option>
+                            <option value="Banco del tesoro">Banco del tesoro</option>
+                            <option value="Banesco">Banesco</option>
+                            <option value="Mercantil">Mercantil</option>
+                            <option value="BNC">BNC</option>
+                            <option value="BFC">BFC</option>
+                            <option value="Banco Bicentenario">Banco Bicentenario</option>
+                            <option value="Banco Exterior">Banco Exterior</option>
+                            <option value="Bancaribe">Bancaribe</option>
+                            <option value="Venezolana de Credito">Venezolana de Credito</option>
+                            <option value="Banco Caroni">Banco Caroni</option>
+                            <option value="Banco Plaza">Banco Plaza</option>
+                            <option value="Citibank">Citibank</option>
+                            <option value="Banplus">Banplus</option>
+                            <option value="Banco Activo">Banco Activo</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="employee.account" name="account" placeholder="Numero de cuenta" class="form-control">
+                    </div> 
+        
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
